@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>start</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="icon" sizes="any" type="image/svg+xml" href="/assets/img/favicon.svg">
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <div class="flex flex-row flex-wrap justify-center">
+            {% render "folder.html", bookmarks: bookmarks %}
+        </div>
+    </div>
+    <div class="pl-4 text-xs text-gray-400">
+        <a href="/output_bookworms/{{ bookmark_source }}browsers.html">download browser bookmarks</a>
+    </div>
+</body>
+
+</html>

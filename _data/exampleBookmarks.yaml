@@ -1,0 +1,33 @@
+---
+label: ElevenTailWorm Bookmarks
+description: These are sample bookmarks to teach you how ElevenTailWorm works
+folders:
+  - label: folder 1
+    description: This is to describe the folder structure
+    bookmarks:
+      - label: sample url 1
+        href: https://www.mywebsite.com
+    folders:
+      - label: sub folder 1
+        description: This is to describe the sub folder structure
+        bookmarks:
+          - label: ElevenTailWorm GitHub
+            description: Optional description
+            href: https://github.com/reithose/ElevenTailWorm
+          - label: Bookworms GitHub
+            href: https://github.com/thearegee/bookworms
+  - label: folder 2
+    folders:
+      - label: sub folder 2
+        bookmarks:
+          - label: sample url 2
+            href: https://www.mywebsite.com
+          - label: sample url 3
+            href: https://www.mywebsite.com
+        folders:
+          - label: sub sub folder
+            bookmarks:
+              - label: sample url 4
+                href: https://www.mywebsite.com
+              - label: sample url 5
+                href: https://www.mywebsite.com

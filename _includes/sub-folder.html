@@ -1,0 +1,24 @@
+<li class="list-none pl-3 pt-3">
+    <span class="font-semibold">
+        {{
+        bookmarks.label
+        }}</span>
+    <ul>
+        {% for bookmark in bookmarks.bookmarks %}
+        <li  class="pt-1">
+            <a class="text-blue-700 hover:underline" title="{{ bookmark.description }}" href="{{ bookmark.href }}">
+                {{ bookmark.label }}
+            </a>
+
+            {% if bookmark.description %}
+            <p class="pl-1 text-xs text-gray-400">
+                {{ bookmark.description }}
+            </p>
+            {% endif %}
+        </li>
+        {% endfor %}
+        {% for folder in bookmarks.folders %}
+        {% render "sub-folder.html", bookmarks: folder %}
+        {% endfor %}
+    </ul>
+</li>

@@ -1,0 +1,24 @@
+{% for folder in bookmarks.folders %}
+<div class="p-8">
+    <h2 class="text-2xl text-gray-700 font-bold">{{ folder.label }}</h2>
+    <p class="text-xs text-gray-400 pb-3">{{ folder.description }}</p>
+    <ul>
+        {% for bookmark in folder.bookmarks %}
+        <li class="pt-1">
+            <a class="text-blue-700 hover:underline" href="{{ bookmark.href }}">
+                {{ bookmark.label }}
+            </a>
+            
+            {% if bookmark.description %}
+            <p class="pl-1 text-xs text-gray-400">
+                {{ bookmark.description }}
+            </p>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% for folder in folder.folders %}
+    {% render "sub-folder.html", bookmarks: folder %}
+    {% endfor %}
+</div>
+{% endfor %}
